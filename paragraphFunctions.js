@@ -51,6 +51,7 @@ function addParagraph(string) {
     input.innerHTML += newElement;
 }
 function addInputLine() {
+    inputLocation = 0;
     slashReslash();
 
     selectInputLineNum ++;
