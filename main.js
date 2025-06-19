@@ -46,8 +46,6 @@ let packLosedNum, packRecivedNum = 0;
 let pingValueSet = [];
 let totalPingValue, averagePingValue = 0;
 
-let pingTestResultString;
-
 const packTestNum = 4;
 
 // 底层

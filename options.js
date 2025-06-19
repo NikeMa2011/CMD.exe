@@ -8,12 +8,12 @@ function request(packNum) {
 
         setTimeout(() => {
             if (pingValue <= 1000) {
-                addParagraph("\trequest form: " + IPAddressString + ", delay: " + actuallPingValue + "ms, recived.");
+                addParagraph("\tReply form: " + IPAddressString + ": time = " + actuallPingValue + "ms TTL = 64");
 
                 pingValueSet[packNum] = actuallPingValue;
                 packRecivedNum ++;
             } else {
-                addParagraph("\trequest timeout.");
+                addParagraph("\tPING: transmit failed. General failure.");
 
                 packLosedNum ++;
             }
@@ -25,10 +25,11 @@ function request(packNum) {
 function pingFinsh() {
     pingValue = 0;
 
-    pingTestResultString = "ping result: should recived: " + packTestNum + ", total pack recived: " + packRecivedNum + ", total pack losted: " + packLosedNum + ", lost pack value: " + packLosedNum / packTestNum * 100 + '%';
+    addNullPadagraph();
 
-    addParagraph("\n");
-    if (packRecivedNum != 0) {
+    addParagraph("Ping statistics for " + IPAddressString + ':');
+    addParagraph("\tPackets: Sent = " + packTestNum + ", Recived = " + packRecivedNum + ", Lost = " + packLosedNum + " (" + packLosedNum / packTestNum * 100 + '% loss),');
+    if (!packRecivedNum == 0) {
         for (let i = 0; i < 4; i ++) {
             totalPingValue += pingValueSet[i];
         }
@@ -37,11 +38,11 @@ function pingFinsh() {
         totalPingValue = 0;
         pingValueSet = [];
 
-        addParagraph(pingTestResultString + ", average ping: " + averagePingValue + "ms.");
+        addParagraph(pingTestResultString + "average ping: " + averagePingValue + "ms.");
 
         averagePingValue = 0;
     } else {
-        addParagraph(pingTestResultString + '.');
+        addParagraph();
     }
     addInputLine();
 }
@@ -54,7 +55,7 @@ function ping(IPAddress) {
         setRandomPingRange();
         setRandomPingSwing();
 
-        addParagraph("ping to the IP address: " + IPAddressString);
+        addParagraph("Pinging " + IPAddressString + "with 32 bytes of data:");
         request(0);
     }
 }
