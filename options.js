@@ -55,7 +55,7 @@ function ping(IPAddress) {
         setRandomPingRange();
         setRandomPingSwing();
 
-        addParagraph("Pinging " + IPAddressString + "with 32 bytes of data:");
+        addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
         request(0);
     }
 }
