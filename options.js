@@ -38,7 +38,8 @@ function pingFinsh() {
         totalPingValue = 0;
         pingValueSet = [];
 
-        addParagraph(pingTestResultString + "average ping: " + averagePingValue + "ms.");
+        addParagraph("Approximate round trip times in milli-seconds:");
+        addNullPadagraph("\t Minimum = " +  + "ms, Maximum = " +  + "ms, Average = " +  + "ms");
 
         averagePingValue = 0;
     } else {
