@@ -42,6 +42,12 @@ function inputLineAddKey() {
 }
 
 
+function addNullPadagraph() {
+    selectInputLineNum ++;
+
+    newElement = "<p id=\"paragraph_" + selectInputLineNum + "\">\n</p>";
+    input.innerHTML += newElement;
+}
 function addParagraph(string) {
     selectInputLineNum ++;
     if(string == undefined) {
