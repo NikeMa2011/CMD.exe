@@ -36,8 +36,6 @@ const involvedKeys = ["Escape", "Control", "Alt", "Tab", "Fn", "CapsLock", "Arro
 //                     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '/', ':', '<', '>', '?', ',', '.', ';', '[', ']', '{', '}', '-', '=', '_', '+', '!', '@', '#', '$', 
 //                     '%', '^', '&', '*', '(', ')']; // dont use this
 
-// tung tung tung tung tung tung sahur
-
 let IPAddressString = null;
 
 let actuallPingValue, pingValue = 0;
