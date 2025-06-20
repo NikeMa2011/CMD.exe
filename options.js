@@ -8,7 +8,7 @@ function request(packNum) {
 
         setTimeout(() => {
             if (pingValue <= 1000) {
-                addParagraph("\tReply form: " + IPAddressString + ": time = " + actuallPingValue + "ms TTL = 64");
+                addParagraph("\tReply form: " + IPAddressString + ": time = " + actuallPingValue);
 
                 pingValueSet[packNum] = actuallPingValue;
                 packRecivedNum ++;
@@ -48,15 +48,26 @@ function pingFinsh() {
     addInputLine();
 }
 function ping(IPAddress) {
-    if (IPAddress == null) {
-        addParagraph("didn t define the IP adress.");
-    } else {
-        IPAddressString = IPAddress;
+    if (IPAddress == undefined) {
+        addParagraph("Usage: ping [host]");
+        addParagraph("\tPing the specified host(IPv4 only) until stopped.");
+        addNullPadagraph();
 
-        setRandomPingRange();
-        setRandomPingSwing();
+        addInputLine();
+    } else { 
+        if (IsIPAddress(IPAddress)) {
+            IPAddressString = IPAddress;
 
-        addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
-        request(0);
+            setRandomPingRange();
+            setRandomPingSwing();
+
+            addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
+            request(0);
+        } else {
+            addParagraph("Ping request could not find host " + IPAddress + ". Please check the name and try again.");
+            addNullPadagraph();
+
+            addInputLine();
+        }
     }
 }
