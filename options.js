@@ -64,7 +64,7 @@ function ping(IPAddress) {
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
             request(0);
         } else {
-            addParagraph("Ping request could not find host " + IPAddress + ". Please check the name and try again.");
+            addParagraph("Ping request could not find host " + IPAddress + " . Please check the name and try again.");
             addNullPadagraph();
 
             addInputLine();
