@@ -18,6 +18,7 @@ function searchKeyWords(input) {
 function IsIPAddress(input) {
     let IPParts = [];
     let IPPartsNum = 0;
+    
     for (let i = 0; i < 4; i++) {
         if(input[i] == '.') {
             IPParts++;
