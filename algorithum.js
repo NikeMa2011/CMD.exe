@@ -18,21 +18,24 @@ function searchKeyWords(input) {
 function IsIPAddress(input) {
     let IPParts = [];
     let IPPartsNum = 0;
-    
-    for (let i = 0; i < 4; i++) {
+
+    for (let i = 0; i < input.length; i++) {
         if(input[i] == '.') {
-            IPParts++;
+            IPPartsNum++;
             continue;
         } else {
-            if (!IPPartsNum[IPParts]) {
-                IPPartsNum[IPParts] = '';
+            if (!IPParts[IPPartsNum]) {
+                IPParts[IPPartsNum] = '';
             }
-            IPPartsNum[IPParts] += input[i];
+            IPParts[IPPartsNum] += input[i];
         }
     }
-    if (IPParts == 4) {
+    Cout(IPPartsNum);
+    if (IPPartsNum == 4) {
         for (let i = 0; i < 4; i ++) {
-            if (!IPPartsNum[IPParts] <= 255 && IPPartsNum[IPParts] >= 0) {
+            Cout(IPParts[i]);
+
+            if (!IPParts[i] <= 255 && IPParts[i] >= 0) {
                 return false;
             }
         }
