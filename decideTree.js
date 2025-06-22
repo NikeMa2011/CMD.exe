@@ -13,6 +13,6 @@ function run(keyWords) {
         addParagraph("author: " + author + ", github link: " + githubLink + ", email-address: " + emailAddress);
     } else {
         addParagraph(error + "invalid input.");
-        addInputLine();
+        addInputRow();
     }
 }

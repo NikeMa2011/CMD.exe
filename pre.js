@@ -1,2 +1,2 @@
 // 初始化
-addInputLine();
+addInputRow();

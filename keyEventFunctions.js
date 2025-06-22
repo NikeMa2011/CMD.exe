@@ -41,7 +41,7 @@ window.addEventListener("keydown", function (event) {
                 Cout("speical input: " + inputKey);
             }
         } else {
-            inputLineAddKey();
+            inputRowAddKey();
         }
         displayInput();
     }

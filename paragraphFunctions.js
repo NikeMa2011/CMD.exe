@@ -30,7 +30,7 @@ function displayInput() {
 
     slashReslash();
 }
-function inputLineAddKey() {
+function inputRowAddKey() {
     inputLocation ++;
 
     frontString = inputString.slice(0, inputLocation);
@@ -43,32 +43,32 @@ function inputLineAddKey() {
 
 
 function addNullPadagraph() {
-    selectInputLineNum ++;
+    selectInputRowNum ++;
 
-    newElement = "<p id=\"paragraph_" + selectInputLineNum + "\">\n</p>";
+    newElement = "<p id=\"paragraph_" + selectInputRowNum + "\">\n</p>";
     input.innerHTML += newElement;
 }
 function addParagraph(string) {
-    selectInputLineNum ++;
+    selectInputRowNum ++;
     if(string == undefined) {
         string = '';
     }
-    newElement = "<p id=\"paragraph_" + selectInputLineNum + "\">" + string + "</p>";
+    newElement = "<p id=\"paragraph_" + selectInputRowNum + "\">" + string + "</p>";
     input.innerHTML += newElement;
 }
-function addInputLine() {
+function addInputRow() {
     inputLocation = 0;
     slashReslash();
 
-    selectInputLineNum ++;
-    newElement = "<p id=\"pre_" + selectInputLineNum + "\">" + preString + "<span id=\"input_" + selectInputLineNum + "\"></span>";
+    selectInputRowNum ++;
+    newElement = "<p id=\"pre_" + selectInputRowNum + "\">" + preString + "<span id=\"input_" + selectInputRowNum + "\"></span>";
     input.innerHTML += newElement;
-    getInputLine();
+    getInputRow();
 }
-function getInputLine() {
-    selectInputLine = document.getElementById("input_" + selectInputLineNum);
-    inputString = selectInputLine.innerHTML;
+function getInputRow() {
+    selectInputRow = document.getElementById("input_" + selectInputRowNum);
+    inputString = selectInputRow.innerHTML;
 }
 function refresh(){
-    selectInputLine.innerHTML = inputString;
+    selectInputRow.innerHTML = inputString;
 }

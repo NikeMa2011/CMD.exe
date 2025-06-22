@@ -2,7 +2,7 @@
 const input = document.getElementById("input");
 const showLocation = document.getElementById("showLocation");
 
-let selectInputLine = 0;
+let selectInputRow = 0;
 let inputString = "", inputKey = '';
 let inputLocation = 0;
 const preString = "> ";
@@ -13,7 +13,7 @@ let slash;
 let frontString, backString;
 
 let newElement;
-let selectInputLineNum = 0;
+let selectInputRowNum = 0;
 
 let outputLength = 0;
 

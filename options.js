@@ -45,7 +45,7 @@ function pingFinsh() {
     } else {
         addParagraph();
     }
-    addInputLine();
+    addInputRow();
 }
 function ping(IPAddress) {
     if (IPAddress == undefined) {
@@ -53,7 +53,7 @@ function ping(IPAddress) {
         addParagraph("\tPing the specified host(IPv4 only) until stopped.");
         addNullPadagraph();
 
-        addInputLine();
+        addInputRow();
     } else { 
         if (IsIPAddress(IPAddress)) {
             IPAddressString = IPAddress;
@@ -67,7 +67,7 @@ function ping(IPAddress) {
             addParagraph("Ping request could not find host " + IPAddress + " . Please check the name and try again.");
             addNullPadagraph();
 
-            addInputLine();
+            addInputRow();
         }
     }
 }
