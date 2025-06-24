@@ -41,7 +41,7 @@ let IPAddressString = null;
 let actuallPingValue, pingValue = 0;
 let randomPingRange, randomPingSwing = 0;
 
-let packLosedNum, packRecivedNum = 0;
+let packLosedNum = 0, packRecivedNum = 0;
 
 let pingValueSet = [];
 let totalPingValue, averagePingValue = 0;
