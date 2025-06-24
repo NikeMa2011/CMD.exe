@@ -55,7 +55,7 @@ function ping(IPAddress) {
 
         addInputRow();
     } else { 
-        if (IsIPAddress(IPAddress)) {
+        if (isIPAddress(IPAddress)) {
             IPAddressString = IPAddress;
 
             setRandomPingRange();

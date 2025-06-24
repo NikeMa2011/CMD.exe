@@ -15,7 +15,7 @@ function searchKeyWords(input) {
     }
     run(keyWords);
 }
-function IsIPAddress(input) {
+function isIPAddress(input) {
     let IPParts = [];
     let IPPartsNum = 0;
 
