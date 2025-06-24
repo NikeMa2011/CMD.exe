@@ -32,6 +32,12 @@ function pingFinsh() {
     if (packRecivedNum != 0) {
         for (let i = 0; i < 4; i ++) {
             totalPingValue += pingValueSet[i];
+
+            if (pingValueSet[i] > maxiumPingValue) {
+                maxiumPingValue = pingValueSet[i];
+            } else if (pingValueSet[i] < minimumPingValue) {
+                minimumPingValue = pingValueSet[i];
+            }
         }
 
         averagePingValue = Math.floor(totalPingValue / 4);
@@ -39,7 +45,8 @@ function pingFinsh() {
         pingValueSet = [];
 
         addParagraph("Approximate round trip times in milli-seconds:");
-        addNullPadagraph("\t Minimum = " +  + "ms, Maximum = " +  + "ms, Average = " +  + "ms");
+        addParagraph("\tMinimum = " + minimumPingValue + "ms, Maximum = " + maxiumPingValue + "ms, Average = " + averagePingValue + "ms");
+        addNullPadagraph();
 
         averagePingValue = 0;
     } else {

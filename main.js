@@ -42,9 +42,10 @@ let actuallPingValue, pingValue = 0;
 let randomPingRange, randomPingSwing = 0;
 
 let packLosedNum = 0, packRecivedNum = 0;
+let minimumPingValue = 999, maxiumPingValue = 0;
 
 let pingValueSet = [];
-let totalPingValue, averagePingValue = 0;
+let totalPingValue = 0, averagePingValue;
 
 const packTestNum = 4;
 
