@@ -1,6 +1,6 @@
 // 定义
 const input = document.getElementById("input");
-const showLocation = document.getElementById("showLocation");
+const showLocationRow = document.getElementById("showLocation");
 
 let selectInputRow = 0;
 let inputString = "", inputKey = '';

@@ -1,33 +1,41 @@
 function giveSpace() {
-    showLocation.innerHTML = null;
+    showLocationRow.innerHTML = null;
     for (let i = 0; i < inputLocation + preString.length; i ++) {
-        showLocation.innerHTML += ' ';
+        showLocationRow.innerHTML += ' ';
     }
 }
 function slashFunction() {
     giveSpace();
     if (debugIsON) Cout("slash is: " + slashBool);
     if (slashBool) {
-        showLocation.innerHTML += '¯';
+        showLocationRow.innerHTML += '¯';
         slashBool = false;
     } else {
         slashBool = true;
     }
 }
-function slashReslash() {
+function slashStop() {
     giveSpace();
     clearInterval(slash);
 
     slashBool = true;
     slashFunction();
+}
+function slashReslash() {
+    slashStop();
 
     slash = setInterval(() => {
         slashFunction();
     }, 500);
 }
+function slashHide() {
+    showLocationRow.hidden = true;
+}
+function slashApper() {
+    showLocationRow.hidden = false;
+}
 function displayInput() {
     refresh();
-
     slashReslash();
 }
 function inputRowAddKey() {
@@ -58,6 +66,7 @@ function addParagraph(string) {
 }
 function addInputRow() {
     inputLocation = 0;
+    slashApper();
     slashReslash();
 
     selectInputRowNum ++;

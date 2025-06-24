@@ -35,6 +35,9 @@ window.addEventListener("keydown", function (event) {
                     Cout("input location is already on minium size (0)");
                 }
             } else if (inputKey == "Enter") {
+                slashStop();
+                slashHide();
+
                 searchKeyWords(inputString);
                 return;
             } else if (debugIsON) {
