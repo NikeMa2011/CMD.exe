@@ -29,7 +29,7 @@ function pingFinsh() {
 
     addParagraph("Ping statistics for " + IPAddressString + ':');
     addParagraph("\tPackets: Sent = " + packTestNum + ", Recived = " + packRecivedNum + ", Lost = " + packLosedNum + " (" + packLosedNum / packTestNum * 100 + '% loss),');
-    if (!packRecivedNum == 0) {
+    if (packRecivedNum != 0) {
         for (let i = 0; i < 4; i ++) {
             totalPingValue += pingValueSet[i];
         }
