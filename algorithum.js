@@ -31,13 +31,13 @@ function isIPAddress(input) {
         }
     }
     Cout(IPPartsNum);
-    if (IPPartsNum == 4) {
-        for (let i = 0; i < 4; i ++) {
+    if (IPPartsNum == 3) {
+        for (let i = 0; i >= IPPartsNum; i ++) {
             Cout(IPParts[i]);
 
-            if (!IPParts[i] <= 255 && IPParts[i] >= 0) {
-                return false;
-            }
+            if (IPParts[i] <= 255 && IPParts[i] >= 0) {
+                // 所以说为什么我用 !IPParts[i] <= 255 && IPParts[i] >= 0 不行???
+            } else return false;
         }
         return true;
     }
