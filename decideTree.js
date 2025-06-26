@@ -1,6 +1,6 @@
 // 决策树
 const author = "NikeMa2011";
-const githubLink = "https://github.com/NikeMa2011/";
+const githubLink = "https://github.com/NikeMa2011/CMD.exe";
 const emailAddress = "huz193py@outlook.com";
 
 const error = "[Error]";
