@@ -31,7 +31,7 @@ function isIPAddress(input) {
         }
     }
     if (IPPartsNum == 3) {
-        for (let i = 0; i >= IPPartsNum; i ++) {
+        for (let i = 0; i <= IPPartsNum; i ++) {
 
             if (IPParts[i] <= 255 && IPParts[i] >= 0) {
                 // 所以说为什么我用 !IPParts[i] <= 255 && IPParts[i] >= 0 不行???
