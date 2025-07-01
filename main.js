@@ -5,7 +5,7 @@ const showLocationRow = document.getElementById("showLocation");
 let selectInputRow = 0;
 let inputString = "", inputKey = '';
 let inputLocation = 0;
-const preString = "> ";
+const preString = ">";
 
 let slashBool = true;
 let slash;
