@@ -1,6 +1,7 @@
 function searchKeyWords(input) {
     let keyWords = {};
     let keyWordNum = 0;
+
     for (let i = 0; i < input.length; i ++) {
         // char by char ↑
         if (input[i] == ' ') {
@@ -13,6 +14,7 @@ function searchKeyWords(input) {
             keyWords[keyWordNum] += input[i];
         }
     }
+
     run(keyWords);
 }
 function isIPAddress(input) {
@@ -27,9 +29,11 @@ function isIPAddress(input) {
             if (!IPParts[IPPartsNum]) {
                 IPParts[IPPartsNum] = '';
             }
+
             IPParts[IPPartsNum] += input[i];
         }
     }
+    
     if (IPPartsNum == 3) {
         for (let i = 0; i <= IPPartsNum; i ++) {
 
