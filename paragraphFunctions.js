@@ -48,6 +48,23 @@ function inputRowAddKey() {
     }
     inputString = frontString + inputKey + backString;
 }
+function inputRowBackSpace() {
+    if (inputLocation > 0) {
+        if (debugIsON) {
+            Cout("inputLocation: " + inputLocation);
+        }
+
+        frontString = inputString.slice(0, inputLocation - 1);
+        backString = inputString.slice(inputLocation, outputLength);
+        Cout(frontString + ' ' +  backString); 
+
+        inputString = frontString + backString;
+
+        inputLocation --; 
+    } else if (debugIsON) {
+        Cout("input location is already on minium size (0)");
+    }
+}
 
 
 function addNullPadagraph() {

@@ -23,17 +23,7 @@ window.addEventListener("keydown", function (event) {
                     }
                 }
             } else if (inputKey == "Backspace") {
-                if (inputLocation > 0) {
-                    inputLocation --;
-
-                    if (debugIsON) {
-                        Cout(inputLocation);
-                    }
-                    
-                    inputString = inputString.slice(0, -1);
-                } else if (debugIsON) {
-                    Cout("input location is already on minium size (0)");
-                }
+                inputRowBackSpace();
             } else if (inputKey == "Enter") {
                 slashStop();
                 slashHide();
