@@ -1,6 +1,6 @@
 function giveSpace() {
     showLocationRow.innerHTML = null;
-    
+
     for (let i = 0; i < inputLocation + preString.length; i ++) {
         showLocationRow.innerHTML += ' ';
     }
@@ -59,7 +59,7 @@ function inputRowBackSpace() {
         }
 
         frontString = inputString.slice(0, inputLocation - 1);
-        backString = inputString.slice(inputLocation, outputLength);
+        backString = inputString.slice(inputLocation, inputRowStringLength);
         Cout(frontString + ' ' +  backString); 
 
         inputString = frontString + backString;

@@ -1,6 +1,6 @@
 window.addEventListener("keydown", function (event) {
     inputKey = event.key;
-    outputLength = inputString.length;
+    inputRowStringLength = inputString.length;
 
     if (involvedKeys.includes(inputKey)) {
         if (debugIsON) {
@@ -15,7 +15,7 @@ window.addEventListener("keydown", function (event) {
                     Cout("input location is already on minium size (0)");
                 }
             } else if (inputKey == "ArrowRight") {
-                if (inputLocation < outputLength) {
+                if (inputLocation < inputRowStringLength) {
                     inputLocation ++;
                 } else {
                     if (debugIsON) {

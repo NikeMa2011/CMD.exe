@@ -15,7 +15,8 @@ let frontString, backString;
 let newElement;
 let selectInputRowNum = 0;
 
-let outputLength = 0;
+
+let inputRowStringLength = 0;
 
 const waitFrame1 = ['-', '\\', '|', '/'];
 const waitFrame2 = ['o', 'O', '0', 'O'];
