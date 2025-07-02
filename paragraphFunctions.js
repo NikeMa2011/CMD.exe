@@ -60,7 +60,6 @@ function inputRowBackSpace() {
 
         frontString = inputString.slice(0, inputLocation - 1);
         backString = inputString.slice(inputLocation, inputRowStringLength);
-        Cout(frontString + ' ' +  backString); 
 
         inputString = frontString + backString;
 
