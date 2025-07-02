@@ -49,6 +49,8 @@ function pingFinsh() {
         addParagraph("\tMinimum = " + minimumPingValue + "ms, Maximum = " + maxiumPingValue + "ms, Average = " + averagePingValue + "ms");
         addNullPadagraph();
 
+        minimumPingValue, maxiumPingValue, averagePingValue = 0;
+
         averagePingValue = 0;
     } else {
         addParagraph();
