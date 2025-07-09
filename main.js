@@ -2,6 +2,9 @@
 const input = document.getElementById("input");
 const showLocationRow = document.getElementById("showLocation");
 
+let inputStringSets = [];
+let selectInputStringSetNUm = 0;
+
 let selectInputRow = 0;
 let inputString = "", inputKey = '';
 let inputLocation = 0;
