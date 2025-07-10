@@ -22,6 +22,10 @@ window.addEventListener("keydown", function (event) {
                         Cout("input location is already on maxium size (" + inputLocation + ")");
                     }
                 }
+            } else if (inputKey == "ArrowUp") {
+
+            } else if (inputKey == "ArrowDown") {
+                
             } else if (inputKey == "Backspace") {
                 inputRowBackSpace();
             } else if (inputKey == "Enter") {
