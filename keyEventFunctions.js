@@ -23,7 +23,7 @@ window.addEventListener("keydown", function (event) {
                     }
                 }
             } else if (inputKey == "ArrowUp") {
-                inputString.innerHTML = inputStringSets;
+                if (selectInputStringSetNUm > 0) inputString.innerHTML = inputStringSets[selectInputStringSetNum];
             } else if (inputKey == "ArrowDown") {
 
             } else if (inputKey == "Backspace") {

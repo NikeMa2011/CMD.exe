@@ -2,8 +2,8 @@ function searchKeyWords(input) {
     let keyWords = {};
     let keyWordNum = 0;
 
-    inputStringSets[selectInputStringSetNUm] = input;
-    selectInputStringSetNUm ++;
+    inputStringSets[selectInputStringSetNum] = input;
+    selectInputStringSetNum ++;
 
     for (let i = 0; i < input.length; i ++) {
         // char by char ↑
