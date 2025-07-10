@@ -23,9 +23,9 @@ window.addEventListener("keydown", function (event) {
                     }
                 }
             } else if (inputKey == "ArrowUp") {
-
+                inputString.innerHTML = inputStringSets;
             } else if (inputKey == "ArrowDown") {
-                
+
             } else if (inputKey == "Backspace") {
                 inputRowBackSpace();
             } else if (inputKey == "Enter") {
