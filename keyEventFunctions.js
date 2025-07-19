@@ -1,6 +1,7 @@
 window.addEventListener("keydown", function (event) {
     inputKey = event.key;
     inputRowStringLength = inputString.length;
+    selectInputString = inputStringSets[selectInputStringSetNum];
 
     if (involvedKeys.includes(inputKey)) {
         if (debugIsON) {
@@ -24,11 +25,13 @@ window.addEventListener("keydown", function (event) {
                 }
             } else if (inputKey == "ArrowUp") {
                 if (selectInputStringSetNum >= 0) {
-                    inputString.innerHTML = inputStringSets[selectInputStringSetNum];
+                    inputString.innerHTML = selectInputString;
+                    inputLocation = selectInputString.length;
                 }
             } else if (inputKey == "ArrowDown") {
                 if (selectInputStringSetNum < inputStringSets.length) {
-                    inputString.innerHTML = inputStringSets[selectInputStringSetNum];
+                    inputString.innerHTML = selectInputString;
+                    inputLocation = selectInputString.length;
                 }
             } else if (inputKey == "Backspace") {
                 inputRowBackSpace();

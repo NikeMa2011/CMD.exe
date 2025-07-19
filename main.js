@@ -4,6 +4,7 @@ const showLocationRow = document.getElementById("showLocation");
 
 let inputStringSets = [];
 let selectInputStringSetNum = 0;
+let selectInputString;
 
 let selectInputRow = 0;
 let inputString = "", inputKey = '';
