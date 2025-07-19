@@ -6,7 +6,7 @@ function searchKeyWords(input) {
     selectInputStringSetNum ++;
 
     for (let i = 0; i < input.length; i ++) {
-        // char by char ↑
+        // 一个一个字符来查找空格来判断关键字和输入
         if (input[i] == ' ') {
             keyWordNum++;
             continue;
