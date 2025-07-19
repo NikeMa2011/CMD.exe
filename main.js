@@ -24,7 +24,7 @@ let inputRowStringLength = 0;
 const waitFrame1 = ['-', '\\', '|', '/'];
 const waitFrame2 = ['o', 'O', '0', 'O'];
 
-const specialKeys = ["Enter", "Shift", "Backspace", "ArrowLeft", "ArrowRight"];
+const specialKeys = ["Enter", "Shift", "Backspace", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"];
 const involvedKeys = ["Escape", "Control", "Alt", "Tab", "Fn", "CapsLock",
                       "Meta", "AudioVolumeMute", "AudioVolumUp", "AudioVlolumeDown",
                       "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"];

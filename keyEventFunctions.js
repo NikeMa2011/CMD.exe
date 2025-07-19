@@ -23,9 +23,13 @@ window.addEventListener("keydown", function (event) {
                     }
                 }
             } else if (inputKey == "ArrowUp") {
-                if (selectInputStringSetNUm > 0) inputString.innerHTML = inputStringSets[selectInputStringSetNum];
+                if (selectInputStringSetNum >= 0) {
+                    inputString.innerHTML = inputStringSets[selectInputStringSetNum];
+                }
             } else if (inputKey == "ArrowDown") {
-
+                if (selectInputStringSetNum < inputStringSets.length) {
+                    inputString.innerHTML = inputStringSets[selectInputStringSetNum];
+                }
             } else if (inputKey == "Backspace") {
                 inputRowBackSpace();
             } else if (inputKey == "Enter") {
