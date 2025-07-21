@@ -8,7 +8,6 @@ function giveSpace() {
 function slashFunction() {
     giveSpace();
 
-    if (debugIsON) Cout("slash is: " + slashBool);
     if (slashBool) {
         showLocationRow.innerHTML += '¯';
         slashBool = false;
@@ -46,26 +45,16 @@ function inputRowAddKey() {
     frontString = inputString.slice(0, inputLocation);
     backString = inputString.slice(inputLocation);
 
-    if (debugIsON) {
-        Cout("inputLocation: " + inputLocation);
-    }
-
     inputString = frontString + inputKey + backString;
 }
 function inputRowBackSpace() {
     if (inputLocation > 0) {
-        if (debugIsON) {
-            Cout("inputLocation: " + inputLocation);
-        }
-
         frontString = inputString.slice(0, inputLocation - 1);
         backString = inputString.slice(inputLocation, inputRowStringLength);
 
         inputString = frontString + backString;
 
         inputLocation --; 
-    } else if (debugIsON) {
-        Cout("input location is already on minium size (0)");
     }
 }
 
