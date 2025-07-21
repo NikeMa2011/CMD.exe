@@ -1,5 +1,5 @@
 function changeInputToInputedString() {
-    input.innerHTML = newInputString;
+    selectInputRow.innerHTML = newInputString;
     inputLocation = newInputString.length;
 }
 
