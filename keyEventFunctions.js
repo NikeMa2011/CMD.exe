@@ -5,6 +5,7 @@ function changeInputToInputedString() {
 
 window.addEventListener("keydown", function (event) {
     inputKey = event.key;
+    inputRowStringLength = inputString.length;
 
     newInputString = inputStringSets[selectInputStringSetNum];
     inputStringSetsLength = (inputStringSets.length) - 1;
