@@ -1,7 +1,17 @@
+function changeInputToInputedString() {
+    input.innerHTML = newInputString;
+    inputLocation = newInputString.length;
+}
+
 window.addEventListener("keydown", function (event) {
     inputKey = event.key;
-    inputRowStringLength = inputString.length;
-    selectInputString = inputStringSets[selectInputStringSetNum];
+
+    newInputString = inputStringSets[selectInputStringSetNum];
+    inputStringSetsLength = (inputStringSets.length) - 1;
+    // inputStringSetsLength = inputStringSets.length;
+    // inputRowStringLength --;
+
+    Cout(inputStringSetsLength + " | " + inputStringSets.length + ' ' + selectInputStringSetNum);
 
     if (involvedKeys.includes(inputKey)) {
         if (debugIsON) {
@@ -24,14 +34,16 @@ window.addEventListener("keydown", function (event) {
                     }
                 }
             } else if (inputKey == "ArrowUp") {
-                if (selectInputStringSetNum >= 0) {
-                    inputString.innerHTML = selectInputString;
-                    inputLocation = selectInputString.length;
+                if (selectInputStringSetNum > 1) {
+                    changeInputToInputedString();
+
+                    selectInputStringSetNum --;
                 }
             } else if (inputKey == "ArrowDown") {
-                if (selectInputStringSetNum < inputStringSets.length) {
-                    inputString.innerHTML = selectInputString;
-                    inputLocation = selectInputString.length;
+                if (selectInputStringSetNum < inputStringSetsLength) {
+                    changeInputToInputedString();
+
+                    selectInputStringSetNum ++;
                 }
             } else if (inputKey == "Backspace") {
                 inputRowBackSpace();
@@ -40,6 +52,7 @@ window.addEventListener("keydown", function (event) {
                 slashHide();
 
                 searchKeyWords(inputString);
+
                 return;
             } else if (debugIsON) {
                 Cout("speical input: " + inputKey);

@@ -3,8 +3,9 @@ const input = document.getElementById("input");
 const showLocationRow = document.getElementById("showLocation");
 
 let inputStringSets = [];
+let inputStringSetsLength;
 let selectInputStringSetNum = 0;
-let selectInputString;
+let newInputString;
 
 let selectInputRow = 0;
 let inputString = "", inputKey = '';
