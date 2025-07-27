@@ -1,8 +1,8 @@
 function changeInputToInputedString() {
-    selectInputRow.innerHTML = newInputString;
+    inputString = newInputString;
     inputLocation = newInputString.length;
-    Cout(newInputString)
-    selectInputRow.innerHTML = newInputString;
+
+    displayInput();
 }
 
 window.addEventListener("keydown", function (event) {

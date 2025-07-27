@@ -2,8 +2,8 @@ function searchKeyWords(input) {
     let keyWords = {};
     let keyWordNum = 0;
 
+    inputStringSets[(selectInputStringSetNum) + 1] = input;
     selectInputStringSetNum ++;
-    inputStringSets[selectInputStringSetNum] = input;
 
     for (let i = 0; i < input.length; i ++) {
         // 一个一个字符来查找空格来判断关键字和输入
