@@ -1,4 +1,5 @@
 function changeInputToInputedString() {
+    Cout("called")
     newInputString = inputStringSets[selectInputStringSetNum];
     inputStringSetsLength = (inputStringSets.length) - 1;
 
@@ -9,6 +10,7 @@ function changeInputToInputedString() {
 }
 
 window.addEventListener("keydown", function (event) {
+    Cout("set = " + inputStringSets + " | selectNum = " + selectInputStringSetNum + " | setLength = " + inputStringSetsLength + " | selectString = " + newInputString)
     inputKey = event.key;
     inputRowStringLength = inputString.length;
 
@@ -21,15 +23,16 @@ window.addEventListener("keydown", function (event) {
             inputLocation ++;
         }
     } else if (inputKey == "ArrowUp") {
-        if (selectInputStringSetNum > 1) {
-
-            selectInputStringSetNum --;
+        if (selectInputStringSetNum > 0) {
+            if (selectInputStringSetNum > 1) {
+                selectInputStringSetNum --;
+            }
             changeInputToInputedString();
         }
     } else if (inputKey == "ArrowDown") {
         if (selectInputStringSetNum < inputStringSetsLength) {
 
-            selectInputStringSetNum++;
+            selectInputStringSetNum ++;
             changeInputToInputedString();
         }
     } else if (inputKey == "Backspace") {
