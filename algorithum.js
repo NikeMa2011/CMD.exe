@@ -41,10 +41,25 @@ function isIPAddress(input) {
         for (let i = 0; i <= IPPartsNum; i ++) {
 
             if (IPParts[i] <= 255 && IPParts[i] >= 0) {
-                // 所以说为什么我用 !IPParts[i] <= 255 && IPParts[i] >= 0 不行???
-            } else return false;
+                isIPAddressReachable(IPParts);
+            }
         }
-        return true;
     }
-    return false;
+}
+function isIPAddressReachable(IPParts) {
+    if (IPParts[0] == 0) {// 无效地址 0.0.0.0 - 0.255.255.255
+        IPAddressType = invaliedIP;
+    } else if (IPParts[0] == 10) {// A类地址 10.0.0.0 - 10.255.255.255
+        IPAddressType = privateIP;
+    } else if (IPParts[0] == 172) {
+        if (IPParts[1] <= 16 && IPParts[1] >= 31) {// B类地址 172.16.0.0 - 172.31.255.255
+            IPAddressType = privateIP;
+        }
+    } else if (IPParts[0] == 192 && IPParts[1] == 168) {// C类地址 192.168.0.0 - 192.168.255.255
+        IPAddressType = privateIP;
+    } else if (IPParts[0] >= 224) {// D和E类地址 224.0.0.0 - 239.255.255.255, 240.0.0.0 - 255.255.255.255
+        IPAddressType = invaliedIP;
+    } else {
+        IPAddressType = publicIP;
+    }
 }

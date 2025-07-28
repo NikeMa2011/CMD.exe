@@ -42,6 +42,9 @@ const involvedKeys = ["Escape", "Control", "Alt", "Tab", "Fn", "CapsLock",
 //                     '%', '^', '&', '*', '(', ')']; // dont use this
 
 let IPAddressString = null;
+let IPAddressType;
+
+let privateIP = "privateIP", publicIP = "publicIP", invaliedIP = "invaliedIP";
 
 let actuallPingValue, pingValue = 0;
 let randomPingRange, randomPingSwing = 0;

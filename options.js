@@ -1,10 +1,14 @@
 // 函数
-function request(packNum) {
+function request(packNum, failPing) {
     if (packNum > 3) {
         pingFinsh();
     } else {
-        pingValue = randomPing();
-        actuallPingValue = Math.floor(pingValue / 2);
+        if (failPing == undefined) {
+            pingValue = randomPing();
+            actuallPingValue = Math.floor(pingValue / 2);
+        } else {
+            pingValue = 5000;
+        }
 
         setTimeout(() => {
             if (pingValue <= 1000) {
@@ -64,15 +68,19 @@ function ping(IPAddress) {
         addNullPadagraph();
 
         addInputRow();
-    } else { 
-        if (isIPAddress(IPAddress)) {
-            IPAddressString = IPAddress;
+    } else {
+        isIPAddress(IPAddress);
+        IPAddressString = IPAddress;
 
+        if (IPAddressType == publicIP) {
             setRandomPingRange();
             setRandomPingSwing();
 
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
             request(0);
+        } else if (IPAddressType == invaliedIP || IPAddressType == privateIP || IPAddressType == localIP) {
+            addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
+            request(0, "fali the ping request");
         } else {
             addParagraph("Ping request could not find host " + IPAddress + " . Please check the name and try again.");
             addNullPadagraph();
