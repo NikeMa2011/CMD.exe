@@ -11,7 +11,7 @@ function request(packNum, failPing) {
         }
 
         setTimeout(() => {
-            if (pingValue <= 1000) {
+            if (pingValue <= 5000) {
                 addParagraph("\tReply form: " + IPAddressString + ": time = " + actuallPingValue + "ms");
 
                 pingValueSet[packNum] = actuallPingValue;
