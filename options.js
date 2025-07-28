@@ -78,7 +78,7 @@ function ping(IPAddress) {
 
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
             request(0);
-        } else if (IPAddressType == invaliedIP || IPAddressType == privateIP || IPAddressType == localIP) {
+        } else if (IPAddressType == invaliedIP || IPAddressType == privateIP) {
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
             request(0, "fali the ping request");
         } else {
