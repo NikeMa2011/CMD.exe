@@ -1,5 +1,4 @@
 function changeInputToInputedString() {
-    Cout("called")
     newInputString = inputStringSets[selectInputStringSetNum];
     inputStringSetsLength = (inputStringSets.length) - 1;
 
@@ -10,7 +9,6 @@ function changeInputToInputedString() {
 }
 
 window.addEventListener("keydown", function (event) {
-    Cout("set = " + inputStringSets + " | selectNum = " + selectInputStringSetNum + " | setLength = " + inputStringSetsLength + " | selectString = " + newInputString)
     inputKey = event.key;
     inputRowStringLength = inputString.length;
 
