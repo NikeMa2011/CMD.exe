@@ -57,7 +57,7 @@ function pingFinsh() {
 
         averagePingValue = 0;
     } else {
-        addParagraph();
+        addNullParagraph();
     }
     addInputRow();
 }
