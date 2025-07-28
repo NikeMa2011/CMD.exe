@@ -1,4 +1,7 @@
 function changeInputToInputedString() {
+    newInputString = inputStringSets[selectInputStringSetNum];
+    inputStringSetsLength = (inputStringSets.length) - 1;
+
     inputString = newInputString;
     inputLocation = newInputString.length;
 
@@ -8,11 +11,6 @@ function changeInputToInputedString() {
 window.addEventListener("keydown", function (event) {
     inputKey = event.key;
     inputRowStringLength = inputString.length;
-
-    newInputString = inputStringSets[selectInputStringSetNum];
-    inputStringSetsLength = (inputStringSets.length) - 1;
-    // inputStringSetsLength = inputStringSets.length;
-    // inputRowStringLength --;
 
     if (inputKey == "ArrowLeft") {
         if (inputLocation > 0) {
@@ -25,14 +23,14 @@ window.addEventListener("keydown", function (event) {
     } else if (inputKey == "ArrowUp") {
         if (selectInputStringSetNum > 1) {
 
-            changeInputToInputedString();
             selectInputStringSetNum --;
+            changeInputToInputedString();
         }
     } else if (inputKey == "ArrowDown") {
         if (selectInputStringSetNum < inputStringSetsLength) {
 
-            changeInputToInputedString();
             selectInputStringSetNum++;
+            changeInputToInputedString();
         }
     } else if (inputKey == "Backspace") {
         inputRowBackSpace();
