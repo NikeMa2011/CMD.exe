@@ -25,11 +25,12 @@ function request(packNum, failPing) {
             pingValue = randomPing();
             actuallPingValue = Math.floor(pingValue / 2);
         } else {
+            Cout("called")
             pingValue = 5000;
         }
 
         setTimeout(() => {
-            if (pingValue <= 5000) {
+            if (pingValue < 5000) {
                 addParagraph("\tReply form: " + IPAddressString + ": time = " + actuallPingValue + "ms");
 
                 pingValueSet[packNum] = actuallPingValue;
