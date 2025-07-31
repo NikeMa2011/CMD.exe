@@ -76,6 +76,8 @@ function addParagraph(string) {
     input.innerHTML += newElement;
 }
 function addInputRow() {
+    executeTask = false;
+
     inputLocation = 0;
 
     slashApper();

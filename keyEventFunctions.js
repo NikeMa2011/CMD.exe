@@ -9,6 +9,10 @@ function changeInputToInputedString() {
 }
 
 window.addEventListener("keydown", function (event) {
+    if (executeTask) {
+        return;
+    }
+
     inputKey = event.key;
     inputRowStringLength = inputString.length;
 
@@ -36,6 +40,8 @@ window.addEventListener("keydown", function (event) {
     } else if (inputKey == "Backspace") {
         inputRowBackSpace();
     } else if (inputKey == "Enter") {
+        executeTask = true;
+
         slashStop();
         slashHide();
 

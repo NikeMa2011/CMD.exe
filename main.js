@@ -17,6 +17,8 @@ let slash;
 
 let frontString, backString;
 
+let executeTask = false;
+
 let newElement;
 let selectInputRowNum = 0;
 
