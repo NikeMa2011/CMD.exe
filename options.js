@@ -1,4 +1,22 @@
-// 函数
+function setRandomPingRange() {
+    randomPingRange = Math.floor(Math.random() * 1500);
+}
+function setRandomPingSwing() {
+    randomPingSwing = Math.floor(Math.random() * 100);
+}
+function randomNum(num) {
+    return Math.floor(Math.random() * num);
+}
+function randomPing() {
+    return Math.floor(Math.random() * randomPingSwing) + randomPingRange;
+}
+function setRandomIP(num) {
+    IPAddressString += randomNum(255);
+    if (num < 3) {
+        IPAddressString += '.';
+        setRandomIP(num += 1);
+    }
+}
 function request(packNum, failPing) {
     if (packNum > 3) {
         pingFinsh();

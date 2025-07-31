@@ -56,24 +56,3 @@ let pingValueSet = [];
 let totalPingValue = 0, averagePingValue;
 
 const packTestNum = 4;
-
-// 底层
-function setRandomPingRange() {
-    randomPingRange = Math.floor(Math.random() * 1500);
-}
-function setRandomPingSwing() {
-    randomPingSwing = Math.floor(Math.random() * 100);
-}
-function randomNum(num) {
-    return Math.floor(Math.random() * num);
-}
-function randomPing() {
-    return Math.floor(Math.random() * randomPingSwing) + randomPingRange;
-}
-function setRandomIP(num) {
-    IPAddressString += randomNum(255);
-    if (num < 3) {
-        IPAddressString += '.';
-        setRandomIP(num += 1);
-    }
-}
