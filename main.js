@@ -46,6 +46,8 @@ const involvedKeys = ["Escape", "Control", "Alt", "Tab", "Fn", "CapsLock",
 let IPAddressString = null;
 let IPAddressType;
 
+let failPing = false;
+
 let privateIP = "privateIP", publicIP = "publicIP", invaliedIP = "invaliedIP";
 
 let actuallPingValue, pingValue = 0;

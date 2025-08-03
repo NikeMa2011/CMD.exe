@@ -1,5 +1,5 @@
 function setRandomPingRange() {
-    randomPingRange = Math.floor(Math.random() * 1500);
+    randomPingRange = Math.floor(Math.random() * 10000);
 }
 function setRandomPingSwing() {
     randomPingSwing = Math.floor(Math.random() * 100);
@@ -17,20 +17,18 @@ function setRandomIP(num) {
         setRandomIP(num += 1);
     }
 }
-function request(packNum, failPing) {
+function request(packNum) {
     if (packNum > 3) {
         pingFinsh();
     } else {
-        if (failPing == undefined) {
+        if (failPing) {
+            actuallPingValue = 5000;
+        } else {
             pingValue = randomPing();
             actuallPingValue = Math.floor(pingValue / 2);
-        } else {
-            Cout("called")
-            pingValue = 5000;
         }
-
         setTimeout(() => {
-            if (pingValue < 5000) {
+            if (actuallPingValue < 5000) {
                 addParagraph("\tReply form: " + IPAddressString + ": time = " + actuallPingValue + "ms");
 
                 pingValueSet[packNum] = actuallPingValue;
@@ -42,10 +40,11 @@ function request(packNum, failPing) {
             }
 
             request(packNum += 1);
-        }, pingValue);
+        }, actuallPingValue);
     }
 }
 function pingFinsh() {
+    failPing = false;
     pingValue = 0;
 
     addNullPadagraph();
@@ -76,7 +75,7 @@ function pingFinsh() {
 
         averagePingValue = 0;
     } else {
-        addNullParagraph();
+        addNullPadagraph();
     }
     addInputRow();
 }
@@ -98,8 +97,10 @@ function ping(IPAddress) {
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
             request(0);
         } else if (IPAddressType == invaliedIP || IPAddressType == privateIP) {
+            failPing = true;
+
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
-            request(0, "fali the ping request");
+            request(0);
         } else {
             addParagraph("Ping request could not find host " + IPAddress + " . Please check the name and try again.");
             addNullPadagraph();
