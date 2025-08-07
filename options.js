@@ -98,7 +98,7 @@ function ping(IPAddress) {
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
 
             request(0);
-        } else if (IPAddressType == invaliedIP || IPAddressType == privateIP) {
+        } else if (IPAddressType == invalidIP || IPAddressType == privateIP) {
             failPing = true;
 
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
@@ -113,7 +113,7 @@ function ping(IPAddress) {
     }
 }
 
-function invaliedInput() {
+function invalidInput() {
     addParagraph("\'" + keyWords[0] + "\' is not recognized as an internal or external command,");
     addParagraph("operable program or batch file.");
     addNullPadagraph();

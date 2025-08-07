@@ -44,7 +44,7 @@ let IPAddressType;
 
 let failPing = false;
 
-let privateIP = "privateIP", publicIP = "publicIP", invaliedIP = "invaliedIP";
+let privateIP = "privateIP", publicIP = "publicIP", invalidIP = "invalidIP";
 
 let actuallPingValue, pingValue = 0;
 let randomPingRange, randomPingSwing = 0;

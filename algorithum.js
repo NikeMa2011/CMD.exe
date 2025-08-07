@@ -47,7 +47,7 @@ function isIPAddress(input) {
 }
 function isIPAddressReachable(IPParts) {
     if (IPParts[0] == 0) {// 无效地址 0.0.0.0 - 0.255.255.255
-        IPAddressType = invaliedIP;
+        IPAddressType = invalidIP;
     } else if (IPParts[0] == 10) {// A类地址 10.0.0.0 - 10.255.255.255
         IPAddressType = privateIP;
     } else if (IPParts[0] == 172) {
@@ -57,7 +57,7 @@ function isIPAddressReachable(IPParts) {
     } else if (IPParts[0] == 192 && IPParts[1] == 168) {// C类地址 192.168.0.0 - 192.168.255.255
         IPAddressType = privateIP;
     } else if (IPParts[0] >= 224) {// D和E类地址 224.0.0.0 - 239.255.255.255, 240.0.0.0 - 255.255.255.255
-        IPAddressType = invaliedIP;
+        IPAddressType = invalidIP;
     } else {
         IPAddressType = publicIP;
     }

@@ -9,6 +9,6 @@ function run(keyWords) {
     } else if (keyWords[0] == "intro") {
         introduce();
     } else {
-        invaliedInput();
+        invalidInput();
     }
 }
