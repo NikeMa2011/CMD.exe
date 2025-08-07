@@ -113,8 +113,8 @@ function ping(IPAddress) {
     }
 }
 
-function invalidInput() {
-    addParagraph("\'" + keyWords[0] + "\' is not recognized as an internal or external command,");
+function invalidInput(input) {
+    addParagraph("\'" + input + "\' is not recognized as an internal or external command,");
     addParagraph("operable program or batch file.");
     addNullPadagraph();
 
