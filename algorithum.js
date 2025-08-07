@@ -1,4 +1,16 @@
+function isInvalidInputString(string) {
+    if (string == '' || string == null || string == undefined || string.trim() == '') {
+        return true;
+    }
+}
+
 function searchKeyWords(input) {
+    if (isInvalidInputString(input)) {
+        nullInput();
+
+        return;
+    }
+
     let keyWords = {};
     let keyWordNum = 0;
 

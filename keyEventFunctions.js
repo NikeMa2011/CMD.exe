@@ -41,18 +41,14 @@ window.addEventListener("keydown", function (event) {
     } else if (inputKey == "Backspace") {
         inputRowBackSpace();
     } else if (inputKey == "Enter") {
-        if (selectInputRow.innerHTML == '') {
-            nullInput();
-        } else {
-            executeTask = true;
+        executeTask = true;
 
-            slashStop();
-            slashHide();
+        slashStop();
+        slashHide();
 
-            searchKeyWords(inputString);
+        searchKeyWords(inputString);
 
-            return;
-        }
+        return;
     } else if (inputKey.length == 1) {
         inputRowAddKey();
     }
