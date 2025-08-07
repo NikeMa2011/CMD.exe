@@ -1,3 +1,9 @@
+function nullInput() {
+    addNullPadagraph();
+    
+    addInputRow();
+}
+
 function giveSpace() {
     showLocationRow.innerHTML = null;
 

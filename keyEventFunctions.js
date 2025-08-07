@@ -22,33 +22,37 @@ window.addEventListener("keydown", function (event) {
         }
     } else if (inputKey == "ArrowRight") {
         if (inputLocation < inputRowStringLength) {
-            inputLocation ++;
+            inputLocation++;
         }
     } else if (inputKey == "ArrowUp") {
         if (selectInputStringSetNum > 0) {
             if (selectInputStringSetNum > 1) {
-                selectInputStringSetNum --;
+                selectInputStringSetNum--;
             }
 
             changeInputToInputedString();
         }
     } else if (inputKey == "ArrowDown") {
         if (selectInputStringSetNum < inputStringSetsLength) {
-            selectInputStringSetNum ++;
+            selectInputStringSetNum++;
 
             changeInputToInputedString();
         }
     } else if (inputKey == "Backspace") {
         inputRowBackSpace();
     } else if (inputKey == "Enter") {
-        executeTask = true;
+        if (selectInputRow.innerHTML == '') {
+            nullInput();
+        } else {
+            executeTask = true;
 
-        slashStop();
-        slashHide();
+            slashStop();
+            slashHide();
 
-        searchKeyWords(inputString);
+            searchKeyWords(inputString);
 
-        return;
+            return;
+        }
     } else if (inputKey.length == 1) {
         inputRowAddKey();
     }
