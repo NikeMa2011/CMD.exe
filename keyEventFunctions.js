@@ -29,12 +29,13 @@ window.addEventListener("keydown", function (event) {
             if (selectInputStringSetNum > 1) {
                 selectInputStringSetNum --;
             }
+
             changeInputToInputedString();
         }
     } else if (inputKey == "ArrowDown") {
         if (selectInputStringSetNum < inputStringSetsLength) {
-
             selectInputStringSetNum ++;
+
             changeInputToInputedString();
         }
     } else if (inputKey == "Backspace") {
@@ -53,5 +54,3 @@ window.addEventListener("keydown", function (event) {
     }
     displayInput();
 });
-
-// 待优化...

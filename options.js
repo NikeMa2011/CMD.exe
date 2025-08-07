@@ -12,6 +12,7 @@ function randomPing() {
 }
 function setRandomIP(num) {
     IPAddressString += randomNum(255);
+
     if (num < 3) {
         IPAddressString += '.';
         setRandomIP(num += 1);
@@ -95,11 +96,13 @@ function ping(IPAddress) {
             setRandomPingSwing();
 
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
+
             request(0);
         } else if (IPAddressType == invaliedIP || IPAddressType == privateIP) {
             failPing = true;
 
             addParagraph("Pinging " + IPAddressString + " with 32 bytes of data:");
+
             request(0);
         } else {
             addParagraph("Ping request could not find host " + IPAddress + " . Please check the name and try again.");
@@ -108,4 +111,19 @@ function ping(IPAddress) {
             addInputRow();
         }
     }
+}
+
+function invaliedInput() {
+    addParagraph("\'" + keyWords[0] + "\' is not recognized as an internal or external command,");
+    addParagraph("operable program or batch file.");
+    addNullPadagraph();
+
+    addInputRow(); 
+}
+
+function introduce() {
+    addParagraph("author: " + author + ", github link: " + githubLink + ", email-address: " + emailAddress);
+    addNullPadagraph();
+
+    addInputRow();
 }

@@ -1,4 +1,3 @@
-// 初始化
 addInputRow();
 
 function introduce() {

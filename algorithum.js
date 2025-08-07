@@ -6,7 +6,7 @@ function searchKeyWords(input) {
     selectInputStringSetNum ++;
 
     for (let i = 0; i < input.length; i ++) {
-        // 一个一个字符来查找空格来判断关键字和输入
+        // 一个一个查找字符串的索引字符来判断是否为关键字
         if (input[i] == ' ') {
             keyWordNum++;
             continue;
@@ -39,7 +39,6 @@ function isIPAddress(input) {
     
     if (IPPartsNum == 3) {
         for (let i = 0; i <= IPPartsNum; i ++) {
-
             if (IPParts[i] <= 255 && IPParts[i] >= 0) {
                 isIPAddressReachable(IPParts);
             }

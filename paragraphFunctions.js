@@ -35,10 +35,15 @@ function slashHide() {
 function slashApper() {
     showLocationRow.hidden = false;
 }
+
 function displayInput() {
     refresh();
     slashReslash();
 }
+function refresh(){
+    selectInputRow.innerHTML = inputString;
+}
+
 function inputRowAddKey() {
     inputLocation ++;
 
@@ -89,10 +94,8 @@ function addInputRow() {
 
     getInputRow();
 }
+
 function getInputRow() {
     selectInputRow = document.getElementById("input_" + selectInputRowNum);
     inputString = selectInputRow.innerHTML;
-}
-function refresh(){
-    selectInputRow.innerHTML = inputString;
 }
