@@ -1,5 +1,7 @@
 function isInvalidInputString(string) {
-    if (string == '' || string == null || string == undefined || string.trim() == '') {
+    if (string == '' || string == null || string == undefined) {
+        return true;
+    } else if (string[0] == ' ') {
         return true;
     }
 }
