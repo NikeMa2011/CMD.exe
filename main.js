@@ -56,3 +56,10 @@ let pingValueSet = [];
 let totalPingValue = 0, averagePingValue;
 
 const packTestNum = 4;
+
+let prePrint = false;
+
+const userAgent = navigator.userAgent;
+
+let windowsVersion;
+let versionOutputString;

@@ -1,4 +1,4 @@
-addInputRow();
+version();
 
 function introduce() {
     Cout("这个库的作者: " + author);
