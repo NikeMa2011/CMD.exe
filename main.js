@@ -63,3 +63,7 @@ const userAgent = navigator.userAgent;
 
 let windowsVersion;
 let versionOutputString;
+
+const author = "NikeMa2011";
+const githubLink = "https://github.com/NikeMa2011/CMD.exe";
+const emailAddress = "huz193py@outlook.com";

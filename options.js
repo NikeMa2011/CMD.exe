@@ -173,9 +173,9 @@ function introduce() {
 
     addParagraph("This Windows command prompt simulator project is in Github.");
     addNullParagraph();
-    addParagraph("Auther of this project: NikeMa2011");
-    addParagraph("Repository URL: \"https://github.com/NikeMa2011/CMD.exe\"");
-    addParagraph("Contact: \"huz193py@outlook.com\"");
+    addParagraph("Author of this project: " + author);
+    addParagraph("Repository URL: \"" + githubLink + "\"");
+    addParagraph("Contact: \"" + emailAddress + "\"");
     addNullParagraph();
 
     addInputRow();
