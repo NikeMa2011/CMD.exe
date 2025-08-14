@@ -120,11 +120,15 @@ function introduce() {
     addInputRow();
 }
 
+function disclaimer() {
+    addParagraph("This Windows command prompt is only an simulator, not belong to Microsoft Corporation.");
+    addParagraph("Type \"intro\" to get more information.");
+}
 function copyRight() {
     addParagraph("(c) Microsoft Corporation. All rights reserved.");
     addNullPadagraph();
-    addParagraph("This Windows command prompt is only an simulator, not belong to Microsoft Corporation.");
-    addParagraph("Type \"intro\" to get more information.")
+
+    disclaimer();
 }
 function getVersion() {
     if (userAgent.includes("Windows NT 10.0")) windowsVersion = "10.0.19045.2015";
@@ -162,7 +166,17 @@ function invalidInput(input) {
 }
 
 function introduce() {
-    Cout("这个库的作者: " + author);
-    Cout("这个项目的github链接: " + githubLink);
-    Cout("作者的电子邮箱地址: " + emailAddress);
+    addParagraph("The disclaimer:");
+    disclaimer();
+
+    addNullPadagraph();
+
+    addParagraph("This Windows command prompt simulator project is in Github.");
+    addNullPadagraph();
+    addParagraph("Auther of this project: NikeMa2011");
+    addParagraph("Repository URL: \"https://github.com/NikeMa2011/CMD.exe\"");
+    addParagraph("Contact: \"huz193py@outlook.com\"");
+    addNullPadagraph();
+
+    addInputRow();
 }
