@@ -48,7 +48,7 @@ function pingFinsh() {
     failPing = false;
     pingValue = 0;
 
-    addNullPadagraph();
+    addNullParagraph();
 
     addParagraph("Ping statistics for " + IPAddressString + ':');
     addParagraph("\tPackets: Sent = " + packTestNum + ", Recived = " + packRecivedNum + ", Lost = " + packLosedNum + " (" + packLosedNum / packTestNum * 100 + '% loss),');
@@ -70,13 +70,13 @@ function pingFinsh() {
 
         addParagraph("Approximate round trip times in milli-seconds:");
         addParagraph("\tMinimum = " + minimumPingValue + "ms, Maximum = " + maxiumPingValue + "ms, Average = " + averagePingValue + "ms");
-        addNullPadagraph();
+        addNullParagraph();
 
         minimumPingValue, maxiumPingValue, averagePingValue = 0;
 
         averagePingValue = 0;
     } else {
-        addNullPadagraph();
+        addNullParagraph();
     }
     addInputRow();
 }
@@ -84,7 +84,7 @@ function ping(IPAddress) {
     if (IPAddress == undefined) {
         addParagraph("Usage: ping [host]");
         addParagraph("\tPing the specified host(IPv4 only) until stopped.");
-        addNullPadagraph();
+        addNullParagraph();
 
         addInputRow();
     } else {
@@ -106,7 +106,7 @@ function ping(IPAddress) {
             request(0);
         } else {
             addParagraph("Ping request could not find host " + IPAddress + " . Please check the name and try again.");
-            addNullPadagraph();
+            addNullParagraph();
 
             addInputRow();
         }
@@ -115,7 +115,7 @@ function ping(IPAddress) {
 
 function introduce() {
     addParagraph("author: " + author + ", github link: " + githubLink + ", email-address: " + emailAddress);
-    addNullPadagraph();
+    addNullParagraph();
     
     addInputRow();
 }
@@ -126,7 +126,7 @@ function disclaimer() {
 }
 function copyRight() {
     addParagraph("(c) Microsoft Corporation. All rights reserved.");
-    addNullPadagraph();
+    addNullParagraph();
 
     disclaimer();
 }
@@ -152,7 +152,7 @@ function version() {
         prePrint = true;
     }
 
-    addNullPadagraph();
+    addNullParagraph();
 
     addInputRow();
 }
@@ -160,7 +160,7 @@ function version() {
 function invalidInput(input) {
     addParagraph("\'" + input + "\' is not recognized as an internal or external command,");
     addParagraph("operable program or batch file.");
-    addNullPadagraph();
+    addNullParagraph();
 
     addInputRow(); 
 }
@@ -169,14 +169,14 @@ function introduce() {
     addParagraph("The disclaimer:");
     disclaimer();
 
-    addNullPadagraph();
+    addNullParagraph();
 
     addParagraph("This Windows command prompt simulator project is in Github.");
-    addNullPadagraph();
+    addNullParagraph();
     addParagraph("Auther of this project: NikeMa2011");
     addParagraph("Repository URL: \"https://github.com/NikeMa2011/CMD.exe\"");
     addParagraph("Contact: \"huz193py@outlook.com\"");
-    addNullPadagraph();
+    addNullParagraph();
 
     addInputRow();
 }

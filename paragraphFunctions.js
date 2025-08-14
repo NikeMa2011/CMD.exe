@@ -1,5 +1,5 @@
 function nullInput() {
-    addNullPadagraph();
+    addNullParagraph();
 
     addInputRow();
 }
@@ -70,7 +70,7 @@ function inputRowBackSpace() {
 }
 
 
-function addNullPadagraph() {
+function addNullParagraph() {
     selectInputRowNum ++;
 
     newElement = "<p id=\"paragraph_" + selectInputRowNum + "\">\n</p>";
