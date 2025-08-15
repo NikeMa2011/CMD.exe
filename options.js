@@ -131,9 +131,9 @@ function copyRight() {
     disclaimer();
 }
 function getVersion() {
-    if (userAgent.includes("Windows NT 10.0")) windowsVersion = "10.0.19045.2015";
-    else if (userAgent.includes("Windows NT 11")) windowsVersion = "11.0.26100.2021";
-    else if (userAgent.includes("Windows NT 6.1")) windowsVersion = "6.1.7601.2009";// yo that NT 6.1 is Windows 7
+    if (userAgent.includes("Windows NT 10.0")) windowsVersion = "10.0.19045.2006";
+    else if (userAgent.includes("Windows NT 11")) windowsVersion = "10.0.26100.4652";
+    else if (userAgent.includes("Windows NT 6.1")) windowsVersion = "6.1.7601.5092";// yo that NT 6.1 is Windows 7
     else windowsVersion = "Error";
 }
 function version() {
