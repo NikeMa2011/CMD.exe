@@ -8,7 +8,7 @@ function isInvalidInputString(string) {
 
 function searchKeyWords(input) {
     if (isInvalidInputString(input)) {
-        nullInput();
+        invalidInput(input)
 
         return;
     }
