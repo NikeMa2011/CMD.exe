@@ -60,6 +60,7 @@ const packTestNum = 4;
 let prePrint = false;
 
 const userAgent = navigator.userAgent;
+const userLanguage = navigator.language;
 
 let windowsVersion;
 let versionOutputString;
