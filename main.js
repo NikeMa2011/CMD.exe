@@ -50,7 +50,7 @@ let actuallPingValue, pingValue = 0;
 let randomPingRange, randomPingSwing = 0;
 
 let packLosedNum = 0, packRecivedNum = 0;
-let minimumPingValue = 999, maxiumPingValue = 0;
+let minimumPingValue = 9999, maxiumPingValue = 0;
 
 let pingValueSet = [];
 let totalPingValue = 0, averagePingValue;
