@@ -57,7 +57,7 @@ let totalPingValue = 0, averagePingValue;
 
 const packTestNum = 4;
 
-let prePrint = false;
+let prePrintedVersion = false;
 
 const userAgent = navigator.userAgent;
 const userLanguage = navigator.language;
