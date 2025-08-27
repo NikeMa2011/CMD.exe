@@ -6,8 +6,9 @@ function nullInput() {
 
 function giveSpace() {
     showLocationRow.innerHTML = null;
+    giveSpaceLength = (inputLocation + opratePathStringLength + 1);
 
-    for (let i = 0; i < inputLocation + preString.length; i ++) {
+    for (let i = 0; i < giveSpaceLength; i ++) {
         showLocationRow.innerHTML += ' ';
     }
 }
@@ -95,7 +96,7 @@ function addInputRow() {
     slashReslash();
 
     selectInputRowNum ++;
-    newElement = "<p id=\"pre_" + selectInputRowNum + "\">" + preString + "<span id=\"input_" + selectInputRowNum + "\"></span>";
+    newElement = "<p id=\"pre_" + selectInputRowNum + "\">" + opratePath + preString + "<span id=\"input_" + selectInputRowNum + "\"></span>";
     input.innerHTML += newElement;
 
     getInputRow();
