@@ -120,7 +120,7 @@ function introduce() {
 function disclaimer() {
     addParagraph(userLanguage == "zh-CN" ? "此 Windows 命令提示符 只是一个模拟器, 并不属于 Microsoft 公司." : "This Windows command prompt is only an simulator, not belong to Microsoft Corporation.");
 
-    if (prePrintedVersion) {
+    if (!prePrintedVersion) {
         addParagraph(userLanguage == "zh-CN" ? "输入 \"intro\" 以获得更多信息." : "Type \"intro\" to get more information.");
     }
 }
