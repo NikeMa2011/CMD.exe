@@ -51,7 +51,7 @@ function pingFinsh() {
     addNullParagraph();
 
     addParagraph(userLanguage == "zh-CN" ? IPAddressString + " 的 Ping 统计信息:" : "Ping statistics for " + IPAddressString + ':');
-    addParagraph(userLanguage == "zh-CN" ? "\t数据包: 已发送 = " + packTestNum + "，已接收 = " + packRecivedNum + "，丢失 = " + packLosedNum + " (" + packLosedNum / packTestNum * 100 + "% 丢失)，" : "\tPackets: Sent = " + packTestNum + ", Recived = " + packRecivedNum + ", Lost = " + packLosedNum + " (" + packLosedNum / packTestNum * 100 + "% loss),");
+    addParagraph(userLanguage == "zh-CN" ? "\t数据包: 已发送 = " + packTestNum + "，已接收 = " + packRecivedNum + "，丢失 = " + packLosedNum + " (" + packLosedNum / packTestNum * 100 + "% 丢失)，" : "\tPackets: Sent = " + packTestNum + ", Received = " + packRecivedNum + ", Lost = " + packLosedNum + " (" + packLosedNum / packTestNum * 100 + "% loss),");
     
     if (packRecivedNum != 0) {
         for (let i = 0; i < 4; i ++) {
