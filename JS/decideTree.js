@@ -3,6 +3,8 @@ function run(keyWords) {
         ping(keyWords[1]);
     } else if (keyWords[0] == "intro") {
         introduce();
+    } else if (keyWords[0] == "help") {
+        help();
     } else {
         invalidInput(keyWords[0]);
     }

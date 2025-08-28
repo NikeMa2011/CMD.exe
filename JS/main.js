@@ -73,3 +73,12 @@ let opratePath = "C:\\Users\\Public\\Desktop";
 let opratePathStringLength = opratePath.length;
 
 let giveSpaceLength = 0;
+
+const functionsNameSet = ["PING", "INTRO", "HELP"];
+const functionsNum = functionsNameSet.length;
+const functionDescriptionSet = ["Ping the specified host until stopped.", "Give more information of this simulator project.", "Provides Help information for Windows commands."];
+
+let largestFunctionNameLength = 0;
+let largestNameLength, functionNameSpaceLength = 0;
+
+let functionNameString = "";

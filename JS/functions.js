@@ -180,3 +180,28 @@ function introduce() {
 
     addInputRow();
 }
+function getLargestFunctionsNameLength() {
+    for (let i = 0; i < functionsNum; i ++) {
+        if (largestFunctionNameLength < functionsNameSet[i].length) {
+            largestFunctionNameLength = functionsNameSet[i].length;
+        }
+    }
+
+    largestNameLength = largestFunctionNameLength + 4;
+}
+function help() {
+    for (let i = 0; i < functionsNum; i ++) {
+        functionNameString = functionsNameSet[i];
+        functionNameSpaceLength = largestNameLength - functionsNameSet[i].length;
+
+        for (let n = 0; n < functionNameSpaceLength; n ++) {
+            functionNameString += ' ';
+        }
+
+        addParagraph(functionNameString + functionDescriptionSet[i]);
+    }
+
+    addNullParagraph();
+
+    addInputRow();
+}
