@@ -46,7 +46,7 @@ window.addEventListener("keydown", function (event) {
         slashStop();
         slashHide();
 
-        searchKeyWords(inputString);
+        searchKeyWords(inputString, ' ');
 
         return;
     } else if (inputKey.length == 1) {

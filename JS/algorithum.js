@@ -6,7 +6,7 @@ function isInvalidInputString(string) {
     }
 }
 
-function searchKeyWords(input) {
+function searchKeyWords(input, char) {
     if (isInvalidInputString(input)) {
         invalidInput(input)
 
