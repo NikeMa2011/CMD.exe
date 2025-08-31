@@ -180,6 +180,7 @@ function introduce() {
 
     addInputRow();
 }
+
 function getLargestFunctionsNameLength() {
     for (let i = 0; i < functionsNum; i ++) {
         if (largestFunctionNameLength < functionsNameSet[i].length) {
