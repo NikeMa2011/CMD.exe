@@ -67,7 +67,7 @@ const author = "NikeMa2011";
 const githubLink = "https://github.com/NikeMa2011/CMD.exe";
 const emailAddress = "huz193py@outlook.com";
 
-let opratePath = "C:\\Users\\Public\\Desktop";
+let opratePath = "C:\\Users\\User\\Desktop";
 let opratePathStringLength = opratePath.length;
 
 let giveSpaceLength = 0;
